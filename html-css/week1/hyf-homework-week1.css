@@ -1,0 +1,102 @@
+body{
+font-family: Helvetica, sans-serif;
+width:100vw;
+background-color:silver;
+}
+
+.wrapper{
+    width:80%;
+   margin-left:150px; 
+   margin-top:50px;
+}
+
+.profile{
+background-color:rgb(94, 161, 161);
+display:flex;
+flex-direction: row;
+}
+
+.profile-box{
+    display:flex;
+flex-direction: column;
+}
+
+img{
+    width:250px;
+    height:250px;
+    padding:70px;   
+}
+
+h1{
+    color:#646665;
+    font-size:50px;
+    padding-left:90px;
+    padding-top:20px;
+}
+
+.paragraph{
+margin-right:40px;
+line-height:1.8em;
+font-size:18px;
+padding-bottom:1px;
+}
+
+.contact-info{
+    background-color:#646665; 
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  color:white;
+}
+
+main{
+    background-color: beige;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:20px 110px;
+}
+
+h2{
+color:rgb(94, 161, 161);
+padding-bottom:10px;
+font-size: 35px;
+}
+
+h3{
+    color:#646665;
+    font-weight: bold;
+    line-height: 1px;   
+}
+
+h4{
+    font-style: italic;
+    color:#646665;
+}
+
+.skills-list{
+    background-color:#646665; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:20px 100px;
+    color:white;
+}
+
+
+
+li a{
+    color:white;  
+    text-decoration: none;
+}
+
+li a:hover{
+    color:rgb(94, 161, 161);
+}
+
+
+footer{
+    background-color:rgb(94, 161, 161);
+    padding:20px 0;
+    text-align: center;
+}
