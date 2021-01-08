@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <title>HYF Homework Week-3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <span>
+            <img src="https://www.kindpng.com/picc/m/466-4668933_transparent-fancy-hanger-clipart-transparent-fashion-hanger-logo.png"
+                alt="hunger logo" class="logo">
+        </span>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <div class="wrapper">
+        <article>
+            <h1>Sign up to yourcustomtailor.com</h1>
+            <p>We can't wait to help you improve your life-style and gain the attention from people around you!</p>
+            <br>
+            <p>Sign up below to save up to 70% on apparel, hand bags and cosmetics. Our agents are busy picking the best
+                offers that match your preferences and style. Every week we will send you a hand-picked selection-we
+                just
+                need to know a few details about you first...</p>
+        </article>
+
+        <h2>Step 1/4 - tell us who you are?</h2>
+        <form action="index2.html" method="GET"></form>
+        <h3>Progress</h3>
+        <progress max="100" value="25">30%</progress>
+        <br>
+        <p>Nice to meet you. Let's spend a minute to get to know each other? Please enter the following:</p>
+
+
+        <div class="form-wrapper">
+            <label for="first-name">First name*</label>
+            <input type="text" name="first-name" id="first-name" required>
+            <label for="last-name">Last name*</label>
+            <input type="text" name="last-name" id="last-name" required>
+        </div>
+
+
+        <div class="form-wrapper">
+            <label for="country">Country*</label>
+            <select id="country" name="country" class="form-control" required>
+                <option value="choice">--Make a choice--</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Cayman Islands">Cayman Islands</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Maldives">Maldives</option>
+            </select>
+        </div>
+
+        <div class="form-wrapper">
+            <label for="street-address">Street address*</label>
+            <input type="text" name="street-address" id="street-address" required>
+            <label for="postal-code">Postal code*</label>
+            <input type="text" name="postal-code" id="postal-code" minlength="4" maxlength="4" required>
+        </div>
+
+        <br>
+        <div class="profile">
+            <span class="profile-items">
+                <label for="profile">Profile Description</label><br>
+                <p>Please provide a short description of yourself to be displayed on our social
+                    community pages.</p>
+            </span>
+            <span class="profile-description">
+                <textarea id="profile-description" name="profile-description" maxlength="500"></textarea>
+            </span>
+        </div>
+        <br>
+        <p>Use the same address for billing and shipping? Uncheck below to fill out a seperate shipping
+            address.
+        </p>
+        <br>
+        <div class="shipping-bottom">
+            <div class="shipping">
+                <label for="shipping">Shipping address</label>
+                <input type="checkbox" name="shipping" id="shipping" required>
+            </div>
+            <div class="button-next">
+                <button type="submit" class="submit1">Next step</button>
+            </div>
+        </div>
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>

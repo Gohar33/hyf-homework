@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <title>HYF Homework Week-3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <span>
+            <img src="https://www.kindpng.com/picc/m/466-4668933_transparent-fancy-hanger-clipart-transparent-fashion-hanger-logo.png"
+                alt="hunger logo" class="logo">
+        </span>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <div class="wrapper">
+        <h1>Sign up to yourcustomtailor.com</h1>
+        <h2>Step 2/4 - how can we reach you?</h2>
+        <form action="index3.html" method="GET"></form>
+        <h3>Progress</h3>
+        <progress max="100" value="60">50%</progress>
+        <br>
+        <p>We will probably need to stay in touch somehow. Let us know how we can reach you?</p>
+
+        <div class="form-wrapper">
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" required>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone">
+        </div>
+
+        <div class="form-wrapper">
+            <label for="password">Password*</label>
+            <input type="password" name="password" id="password" minlength="10" pattern="(?=.*[a-z])(?=.*[A-Z]"
+                required>
+        </div>
+
+        <div class="form-wrapper">
+            <label for=" re-enter-password">Re-enter
+                password*</label>
+            <input type="password" name="confirm_password" id="confirm_password" minlength="10"
+                pattern="(?=.*[a-z])(?=.*[A-Z]" required>
+        </div>
+
+        <p>I want to sign up for the newsletter</p>
+        <div class="newsletter-choice">
+
+            <label for="weekly-news">Weekly news</label>
+            <input type="radio" name="news" id="weekly-news" required>
+
+            <label for="monthly-news">Monthly news</label>
+            <input type="radio" name="news" id="monthly-news" required>
+
+            <label for="no-news">Don't send me news</label>
+            <input type="radio" name="news" id="no-news" required>
+
+        </div>
+
+        <div class="button-next">
+            <button type="submit" class="submit1">Next step</button>
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>

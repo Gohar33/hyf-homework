@@ -1,0 +1,316 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+p,
+ul[class],
+ol[class],
+li{
+  margin: 0;
+}
+
+body{
+    background: linear-gradient(to top, black, cyan); 
+    width:90vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header */
+
+header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:30px;
+
+}
+
+.logo{
+    width:200px;
+    height:100px;
+    margin-left:40px;
+}
+
+nav ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    width:150%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul a{
+    text-decoration: none;
+    color:black;    
+}
+
+/* body */
+
+.wrapper{
+    background-color:#ECF0F1;
+    border:1px solid black;
+    margin:40px 40px 40px 70px;
+    width: 100%;
+    height:300%;
+    padding:20px;  
+}
+
+h1{
+    font-size: 40px;
+    padding-bottom: 30px;
+    letter-spacing: 3px;
+
+}
+
+p{
+    font-size: 20px;
+}
+
+h2{
+    font-size: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+h3{
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+/* progress bar */
+
+progress{
+    display: flex;
+    flex-direction: row;
+    width: 96%;
+    height:40px;
+    transition: width 5s ease;
+    border: 2px solid black;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color:#eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+
+progress[value]::-webkit-progress-value {
+    background-color: teal;
+  }
+
+  
+/* form */
+
+.form-wrapper{
+    display:flex;
+    align-items: center;
+    margin-left: 90px;
+    padding:20px; 
+
+}
+
+.form-wrapper label{
+    flex-basis: 12rem;
+    flex-grow:0;
+    flex-shrink: 0;
+    margin-left:20px;
+    font-weight: bold;
+}
+
+input, select { 
+    width:200px;
+    height:50px;
+    font-size:20px;
+   } 
+
+.profile {
+    display: flex;
+     flex-direction: row;
+     margin-top: 20px;
+    align-items: center;
+    margin-left: 45px;   
+    padding:20px; 
+    display:flex;
+   
+}
+
+.profile label{
+    flex-basis: 12rem;
+    flex-grow:0;
+    flex-shrink: 0;
+    margin-left:20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+
+.profile-description textarea{
+    width:600px;
+    height:200px;    
+    }
+
+.profile label, .shipping label{
+    font-size: 20px;
+ }
+
+.profile p{
+     font-size: 15px;
+     font-style: italic;
+     margin-top: 20px;
+     padding-right: 25px;
+     padding-left:15%;
+   
+ }
+
+
+
+.profile-items{
+    width:22%;
+}
+
+.shipping input{
+    width:50px;
+    height:30px;
+ }
+
+.shipping-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* button */
+
+.button-next{
+    display:flex;
+    justify-content: flex-end;
+    margin:40px 40px 0 0;
+}
+
+.submit1{
+    width:250px;
+    height:70px;
+    font-size:20px;
+}
+
+.submit1:hover{
+    background-color:teal; 
+}
+
+/* For index2 file */
+
+.newsletter-choice{
+    display:flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 110px;
+    font-size: 20px; 
+}
+
+/* For index3 file */
+
+.gallery img{
+    border:2px solid black;
+    width:250px;
+    height:200px;  
+}
+
+.gallery ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.gallery ul li{
+    text-align: right;
+    margin:20px;
+    
+}
+
+.gallery-image input{
+    width:30px;
+    height:30px;
+    font-size:10px;   
+}
+
+
+@media only screen and (max-width: 600px){
+
+.logo{
+    margin:10px 0 0 40px;
+    width:100px;
+    height:50px;
+}
+
+h1{
+    font-size:18px;
+}
+
+.form-wrapper{
+    flex-direction: column;
+    margin-left: 0;
+    padding:10px;
+}
+
+.form-wrapper label{
+    flex-basis: 1rem;
+    font-weight: bold;
+}
+
+.profile{
+    display:flex;
+    flex-direction:column;
+ justify-content: center;   
+    width:100%;
+    margin:0;
+
+    
+   
+}
+
+
+.profile-items{
+    /* border:black solid 2px; */
+  width:90%;
+    margin:0;
+  padding:20px;
+  
+
+}
+
+
+.profile-description textarea{
+    width:200px;
+    height:100px;
+   
+}
+
+.newsletter-choice{
+    margin:0;
+}
+
+.button-next{
+    width:80%;
+    margin-right:0;
+}
+}
