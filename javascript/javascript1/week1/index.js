@@ -26,14 +26,14 @@ if (shouldShowResultInDogYears) {
 
 // Housey pricey (A house price estimator)
 
-peterHouseWidth = 8;
-peterHouseDepth = 10;
-peterHouseHeight = 10;
-peterGardenSizeInM2 = 100;
-peterHouseCost = 2500000;
-peterHouseVolumeInMeters = peterHouseWidth * peterHouseDepth * peterHouseHeight;
-peterTotalHousePrice = peterHouseVolumeInMeters * 2.5 * 1000 + peterGardenSizeInM2 * 300;
-console.log("Real price for Peter's house is " + peterTotalHousePrice)
+let peterHouseWidth = 8;
+let peterHouseDepth = 10;
+let peterHouseHeight = 10;
+let peterGardenSizeInM2 = 100;
+let peterHouseCost = 2500000;
+const peterHouseVolumeInMeters = peterHouseWidth * peterHouseDepth * peterHouseHeight;
+const peterTotalHousePrice = peterHouseVolumeInMeters * 2.5 * 1000 + peterGardenSizeInM2 * 300;
+console.log("Real price for Peter's house is " + peterTotalHousePrice + ".")
 
 if (peterTotalHousePrice < peterHouseCost) {
     console.log("Peter is paying too much.")
@@ -42,14 +42,14 @@ if (peterTotalHousePrice < peterHouseCost) {
 }
 
 
-juliarHouseWidth = 5;
-juliaHouseDepth = 11;
-juliaHouseHeight = 8;
-juliaGardenSizeInM2 = 70;
-juliaHouseCost = 1000000;
-juliaHouseVolumeInMeters = juliarHouseWidth * juliaHouseDepth * juliaHouseHeight;
-juliaTotalHousePrice = juliaHouseVolumeInMeters * 2.5 * 1000 + juliaGardenSizeInM2 * 300;
-console.log("Real price for Julia's house is " + juliaTotalHousePrice)
+let juliarHouseWidth = 5;
+let juliaHouseDepth = 11;
+let juliaHouseHeight = 8;
+let juliaGardenSizeInM2 = 70;
+let juliaHouseCost = 1000000;
+const juliaHouseVolumeInMeters = juliarHouseWidth * juliaHouseDepth * juliaHouseHeight;
+const juliaTotalHousePrice = juliaHouseVolumeInMeters * 2.5 * 1000 + juliaGardenSizeInM2 * 300;
+console.log("Real price for Julia's house is " + juliaTotalHousePrice + ".")
 
 if (juliaTotalHousePrice > juliaHouseCost) {
     console.log("Julia is paying too liitle.")
@@ -66,4 +66,4 @@ let firstWords = ["Easy", "Awesome", "Corporate", 'Fun', "Mango", "Dull", "Busin
 let secondWords = ["Hello", "Cool", "Brave", "Never", "Boat", "Average", "Gangsta", "Gum", "Snickers", "Shokko"]
 const randomNumber = Math.floor(Math.random() * 10) + 0;
 let startupName = firstWords[randomNumber] + " " + secondWords[randomNumber];
-console.log("The startup " + startupName + " contains " + startupName.length + " characters")
+console.log("The startup " + startupName + " contains " + startupName.length + " characters.")
