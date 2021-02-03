@@ -47,7 +47,7 @@ console.log(getEventWeekday(3));
 
 function suggestClothes(temp) {
 
-    if (temp < 0) {
+    if (temp <= 0) {
         console.log("You should wear a coat, scarf and a hat")
     } else if (temp > 0 && temp < 10) {
         console.log("You should wear a coat")
@@ -70,11 +70,11 @@ console.log(clothesToWear);
 let class07Students = [];
 
 function addStudentToClass(studentName) {
-    if (studentName === "Queen") {
+    if (class07Students.includes(studentName)) {
+        console.log("Student " + studentName + " is already in the class")
+    } else if (studentName === "Queen") {
         class07Students.push(studentName);
         console.log("We always have a space for our queen")
-    } else if (class07Students.includes(studentName)) {
-        console.log("Student " + studentName + " is already in the class")
     } else if (class07Students.length > 6) {
         console.log("Cannot add more students to class 07")
     } else if (studentName === "") {
@@ -91,6 +91,7 @@ addStudentToClass("Hanna");
 addStudentToClass("Michael");
 addStudentToClass("Hanna");
 addStudentToClass("Hans");
+addStudentToClass("Queen");
 addStudentToClass("Lars");
 addStudentToClass("Emma");
 addStudentToClass("Emma");
@@ -116,19 +117,20 @@ let boughtCandyPrices = [];
 
 function addCandy(candyType, weight) {
     let price = 0;
-    boughtCandyPrices.push(price);
-    if (candyType === "Sweet") {
-        return price = weight * 0, 5;
-    } else if (candyType === "Chocolate") {
-        return price = weight * 0, 7;
-    } else if (candyType === "Toffee") {
-        return price = weight * 1, 1;
-    } else if (candyType === "Chewing-gum") {
-        return price = weight * 0.003
-    } else {
-        return "something"
-    }
 
+    if (candyType === "Sweet") {
+        price = weight * 0.5;
+    } else if (candyType === "Chocolate") {
+        price = weight * 0.7;
+    } else if (candyType === "Toffee") {
+        price = weight * 1.1;
+    } else if (candyType === "Chewing-gum") {
+        price = weight * 0.003;
+    } else {
+        return boughtCandyPrices;
+    }
+    boughtCandyPrices.push(price);
+    return boughtCandyPrices;
 }
 
 
