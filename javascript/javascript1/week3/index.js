@@ -13,7 +13,7 @@ const names = [
 ];
 const nameToRemove = "Ahmad";
 
-names.splice(1, 1);
+names.splice(names.indexOf(nameToRemove), 1);
 
 console.log(names); // ['Peter', 'Yana', 'kristina', 'Rasmus', 'Samuel', 'katrine', 'Tala']
 
@@ -119,11 +119,10 @@ console.log(firstNote);
 
 //Log out notes
 function logOutNotesFormatted() {
-    for (let i = 0; i < notes.length; i++)
-        notes.forEach((content, id) => {
-            console.log("The note with id: " + notes[i].id + " has the following note text: " + notes[i].content)
+    for (let i = 0; i < notes.length; i++) {
+        console.log("The note with id: " + notes[i].id + " has the following note text: " + notes[i].content)
 
-        })
+    }
 };
 
 logOutNotesFormatted();
@@ -145,6 +144,7 @@ addActivity("30/7-18", "Netflix", 50);
 addActivity("2/8-18", "Facebook", 60);
 console.log(activities);
 
+
 function showStatus(activities) {
     let totalAmount = 0;
     for (let i = 0; i < activities.length; i++) {
@@ -154,7 +154,7 @@ function showStatus(activities) {
     if (totalAmount) {
         console.log(`You have added ${activities.length} activities. They amount to ${totalAmount} min. of usage`)
     } else {
-        return "Add some activities before calling showStatus"
+        console.log("Add some activities before calling showStatus")
     }
 };
 
