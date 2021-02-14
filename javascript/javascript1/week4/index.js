@@ -43,7 +43,6 @@ function getReply(command) {
         let number1 = parseInt(numbers[1]);
         let number2 = parseInt(numbers[3])
         let operator = numbers[2];
-        if (number1 && number2);
         switch (operator) {
             case "-":
                 return number1 - number2;
@@ -53,6 +52,8 @@ function getReply(command) {
                 return number1 * number2;
             case "/":
                 return number1 / number2;
+            default:
+                return "Error";
         }
     }
 
