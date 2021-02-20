@@ -2,7 +2,7 @@
 
 const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"]
 
-function thisFunctionName(danishWords) {
+function getShortestWord(danishWords) {
     let shortestWord = danishWords[0];
     for (let i = 0; i < danishWords.length; i++) {
         if (danishWords[i].length <= shortestWord.length) {
@@ -12,15 +12,33 @@ function thisFunctionName(danishWords) {
     }
     return shortestWord;
 }
-console.log(thisFunctionName(danishWords));
+console.log(getShortestWord(danishWords));
 
+//example with filter, I'll comment it out so will not interact with the main code
+
+/*
+const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"]
+
+
+let shortestWord = danishWords.filter(function (shortWord) {
+    let newArray = shortWord[0]
+    if (shortWord.length <= newArray.length) {
+        newArray = shortWord
+        return newArray;
+
+    }
+
+})
+
+console.log(shortestWord);
+*/
 
 //Find and count the Danish letters
 
 const danishString = "Jeg har en blå bil";
 const danishString2 = "Blå grød med røde bær";
 
-function notThisFunctionName(letters) {
+function danishLetters(letters) {
     let result = { "total": 0, "æ": 0, "ø": 0, "å": 0 }
 
     for (let i = 0; i < letters.length; i++) {
@@ -35,12 +53,6 @@ function notThisFunctionName(letters) {
 }
 
 
-console.log(notThisFunctionName(danishString))
-console.log(notThisFunctionName(danishString2))
-
-
-
-
-
-
+console.log(danishLetters(danishString))
+console.log(danishLetters(danishString2))
 
