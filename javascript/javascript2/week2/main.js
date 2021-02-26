@@ -5,8 +5,8 @@ console.log(products);
 
 function renderProducts(products) {
 
+    let myUl = document.getElementById("myUl");
     products.forEach(products => {
-        let myUl = document.getElementById("myUl");
         let myLi = document.createElement("myli");
         let title = document.createElement("h1");
         let price = document.createElement("p");
