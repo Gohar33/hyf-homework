@@ -32,7 +32,7 @@ button.addEventListener("click", () => {
 
 
 document.addEventListener("keypress", (event) => {
-    if (gameRunning === true) {
+    if (gameRunning) {
         if (event.key === "s") {
             resultS.innerHTML = numberS++
         }
