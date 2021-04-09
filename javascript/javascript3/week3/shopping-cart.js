@@ -1,4 +1,6 @@
-
+const priceUl = document.createElement("ul")
+const container = document.getElementById("container")
+const h2 = document.createElement("h2")
 
 class Product {
     constructor(name, price) {
@@ -22,13 +24,6 @@ class ShoppingCart {
                 products.name !== product.name)
     }
 
-    searchProduct(productName) {
-        const findProducts = this.products.filter(
-            product =>
-                product.name.toLowerCase().includes(productName.toLowerCase()))
-        return findProducts;
-    }
-
     getTotal() {
         const total = this.products.reduce(
             (total, product) =>
@@ -36,20 +31,34 @@ class ShoppingCart {
         return total;
     }
 
-    renderProducts(listOfProducts) {
-        listOfProducts.forEach(product => {
-            const priceUl = document.createElement("ul")
-            priceUl.innerHTML = "";
-            const nameLi = document.createElement("li")
-            nameLi.innerHTML = "";
-            nameLi.style.display = "inline"
-            priceUl.innerHTML = product.name
-            document.body.appendChild(priceUl)
-            nameLi.innerHTML = product.price
-            priceUl.appendChild(nameLi)
-        });
+    searchProduct(productName) {
+        const findProducts = this.products.filter(
+            product =>
+                product.name.toLowerCase().includes(productName.toLowerCase()))
+
+        return findProducts;
 
     }
+
+
+
+    renderProducts(listOfProducts) {
+
+        listOfProducts.forEach(product => {
+            const nameLi = document.createElement("li")
+            nameLi.innerHTML = `${product.name} - ${product.price}`
+            nameLi.style.listStyleType = "none"
+            priceUl.appendChild(nameLi)
+
+        });
+
+        container.appendChild(priceUl)
+
+        h2.innerHTML = `Total -${this.getTotal()}`
+        container.appendChild(h2)
+
+    }
+
 
 
     getUser() {
@@ -66,21 +75,29 @@ const input = document.querySelector("input")
 const button = document.querySelector("button")
 
 button.addEventListener("click", () => {
-    shoppingCart.renderProducts(shoppingCart.searchProduct(input.value))
+    priceUl.innerHTML = "";
+    shoppingCart.renderProducts
+        (shoppingCart.searchProduct(input.value))
+
 })
 
 const shoppingCart = new ShoppingCart();
 const flatscreen = new Product("Flat-screen", 5000);
 shoppingCart.addProduct(flatscreen);
-const TV = new Product("TV-screen", 4000);
+const TV = new Product("TV-screen ", 4000);
 shoppingCart.addProduct(TV);
-const phone = new Product("iPhone", 5000);
+const phone = new Product("iPhone ", 5000);
 shoppingCart.addProduct(phone);
-const ipad = new Product("iPad", 5000);
+const ipad = new Product("iPad ", 5000);
 shoppingCart.addProduct(ipad);
+const laptop = new Product("laptop ", 5000);
+shoppingCart.addProduct(laptop);
 
 
+shoppingCart.removeProduct(flatscreen)
 
+
+//shoppingCart.getTotal()
 
 shoppingCart.getUser()
 shoppingCart.renderProducts(shoppingCart.products)
