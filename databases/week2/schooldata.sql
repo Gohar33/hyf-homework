@@ -30,10 +30,7 @@ ON `student`(`name`);
 
 -- add new column
 ALTER table `class`
-ADD `status` varchar(255) NOT NULL;
+ADD `status` enum('not-started', 'ongoing', 'finished') NOT NULL;
 
 
--- insert values
-INSERT into class (status)
-values("ongoing", "finished");
 
