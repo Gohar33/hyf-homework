@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Indian food in the summer",
+        "maxNumberOfGuests": 5,
+        "description": "A nice night out eating delicious indian food",
+        "createdAt": "2019/12/7 14:34",
+        "price": 67
+    },
+    {
+        "id": 2,
+        "title": "Italian pasta for foodies",
+        "maxNumberOfGuests": 3,
+        "description": "The best italian food in the town",
+        "createdAt": "2021/04/25 11:33",
+        "price": 120
+    },
+    {
+        "id": 3,
+        "title": "lasagna",
+        "maxNumberOfGuests": 2,
+        "description": "Delicious lasagna",
+        "createdAt": "2021/04/26 11:00",
+        "price": 75
+    }
+]
