@@ -64,14 +64,8 @@ router.get("/", async (request, response) => {
 
 router.get("/:id", async (request, response) => {
   const mealId = parseInt(request.params.id)
-  if (mealId <= meals.length) {
-    const bringId = meals.find((meal) => meal.id == mealId);
-    response.send(bringId)
-  } else if (isNaN(mealId)) {
-    response.status(400).send({ Error: "Meal is not found" })
-  } else {
-    response.send()
-  }
+  const bringId = meals.find((meal) => meal.id == mealId);
+  response.send(bringId)
 
 });
 
