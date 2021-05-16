@@ -10,10 +10,8 @@ router.get("/", async (request, response) => {
 
 router.get("/:id", async (request, response) => {
     const reviewId = parseInt(request.params.id)
-
     const revId = reviews.find((review) => review.id === reviewId);
     response.send(revId)
-
 
 });
 
