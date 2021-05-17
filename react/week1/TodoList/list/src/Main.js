@@ -26,20 +26,20 @@ function Deadline(props) {
 
 function Main() {
     const array = [
-        { name: "Get out of bed", deadline: "Wed Sep 13 2017" },
-        { name: "Brush teeth", deadline: "Thu Sep 14 2017" },
-        { name: "Eat breakfast", deadline: "Fri Sep 15 2017" },
-        { name: "Study code", deadline: "Sat Sep 16 2017" },
-        { name: "Go to shop", deadline: "Sun Sep 17 2017" }
+        { id: 1, name: "Get out of bed", deadline: "Wed Sep 13 2017" },
+        { id: 2, name: "Brush teeth", deadline: "Thu Sep 14 2017" },
+        { id: 3, name: "Eat breakfast", deadline: "Fri Sep 15 2017" },
+        { id: 4, name: "Study code", deadline: "Sat Sep 16 2017" },
+        { id: 5, name: "Go to shop", deadline: "Sun Sep 17 2017" }
     ]
     return (
-        <div className>
+        <div>
             {array.map(item => {
                 return (
-                    <span className="todo-item">
+                    <span key={item.id} className="todo-item">
                         <Checkbox />
-                        <MyItem key={item.id} name={item.name} />
-                        < Deadline key={item.id} name={item.deadline} />
+                        <MyItem name={item.name} />
+                        <Deadline name={item.deadline} />
                     </span>
                 )
             })
