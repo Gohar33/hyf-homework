@@ -9,21 +9,18 @@ const array = [
 ]
 
 
-
 function MyItem(props) {
     const [check, setCheck] = useState(false);
 
-    const Check = (props) => {
+    const CheckItem = (props) => {
         setCheck(!check)
 
     }
 
 
-
-
     return (
         <div>
-            <input type="checkbox" onChange={Check} />
+            <input type="checkbox" onChange={CheckItem} />
             <p style={{ textDecoration: check ? "line-through" : "none" }} >{props.name}</p>
         </div >
     )
@@ -39,8 +36,7 @@ function Deadline(props) {
 }
 
 
-
-function Delete(props) {
+function DeleteButton(props) {
     return (
         <button className="deleted-button" onClick={() => props.deleteItem(props.name)}> Delete</button>
     )
@@ -78,7 +74,7 @@ export default function Main() {
     }
     return (
         <div>
-            <AddButton item={callState} />
+            <AddButton addItem={callState} />
 
             {state.length > 0 ?
                 state.map(item => {
@@ -87,7 +83,7 @@ export default function Main() {
 
                             <MyItem name={item.name} />
                             <Deadline name={item.deadline} />
-                            <Delete deleteItem={deleteList} name={item.id} />
+                            <DeleteButton deleteItem={deleteList} name={item.id} />
                         </span>
                     )
                 }) : "No items found"}
