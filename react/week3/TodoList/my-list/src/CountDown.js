@@ -9,16 +9,14 @@ export default function CountDown() {
         const timerId = setTimeout(() => {
             setCount(prev => prev + 1);
         }, 1000);
-
         return () => clearTimeout(timerId)
     });
 
 
 
     return (
-        <div className="count-text">
+        <div className="Form-count">
             You have used {count} seconds on this website
-
         </div>
     );
 }

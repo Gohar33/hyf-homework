@@ -11,12 +11,6 @@ const FetchData = () => {
     const [startDate, setStartDate] = useState(new Date());
 
 
-
-
-
-
-    console.log(value)
-
     const API_URL = 'https://gist.githubusercontent.com/benna100/391eee7a119b50bd2c5960ab51622532/raw'
 
     const FetchApi = () => {
@@ -25,13 +19,11 @@ const FetchData = () => {
             .then(result =>
                 setValue(result)
             )
-
     }
 
     useEffect(() => {
         FetchApi()
     }, [])
-
 
     const deleteList = (id) => {
         const FilterValue = value.filter(item => item.id !== id)
@@ -49,20 +41,22 @@ const FetchData = () => {
     }
 
     return (
-        <div>
+        <div className="Form">
             <form onSubmit={submitForm}>
                 <div>
-                    <label htmlFor="Todo-Description">Todo Description </label>
+                    <label htmlFor="Todo-Description" className="label">Todo Description </label>
                     <input type="text" id="Todo-Description" value={inputText} onChange={(e) => setInputText(e.target.value)}></input>
                 </div>
                 <div>
-                    <label htmlFor="Todo-Deadline">
-                    </label>Deadline:<DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+                    <label htmlFor="Todo-Deadline" className="label" ><br />Deadline
+                    </label> <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} /><br />
                 </div>
+                <br />
                 <button onClick={addTodos}>Add todo</button>
             </form>
             <ul>
-                {value.map((todo) => <ItemList todo={todo} deleteFunc={deleteList} value={value} setInputText={setInputText} />)}
+
+                {value.map((todo) => <ItemList todo={todo} key={todo.id} deleteFunc={deleteList} value={value} setValue={setValue} />)}
             </ul>
         </div >
     )
