@@ -1,5 +1,7 @@
 eggplant
 cucumber
-tomato
+cabbage
 potato
 carrot
+broccoli
+squash
