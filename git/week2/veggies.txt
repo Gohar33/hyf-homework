@@ -1,5 +1,5 @@
 eggplant
 cucumber
-tomato
+parsley
 potato
 carrot
