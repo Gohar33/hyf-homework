@@ -11,17 +11,17 @@ const Main = () => {
     useEffect(() => {
         fetchUsers()
 
-    }, [])
+    }, [input])
 
-    const fetchUsers = (input) => {
+    const fetchUsers = async (input) => {
         setLoading(true)
         const API_URL = `https://api.github.com/search/users?q=${input}`
-        fetch(API_URL)
+        await fetch(API_URL)
             .then(response => response.json())
             .then(data => setUsers(data.items))
         setLoading(false)
     }
- 
+
 
 
     return (
